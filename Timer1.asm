@@ -143,7 +143,7 @@ InstallTimer1Handler     PROC    NEAR
 
 
         XOR     AX, AX                  ;clear ES 
-					;(interrupt vectors are in segment 0)
+                                        ;(interrupt vectors are in segment 0)
         MOV     ES, AX
                                         ;store the vector
         MOV     ES: WORD PTR (4 * Tmr1Vec), OFFSET(Timer1EventHandler)
