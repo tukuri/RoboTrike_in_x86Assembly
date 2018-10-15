@@ -149,7 +149,7 @@ InstallTimer2Handler     PROC    NEAR
 
 
         XOR     AX, AX                  ;clear ES 
-			                ;(interrupt vectors are in segment 0)
+                                        ;(interrupt vectors are in segment 0)
         MOV     ES, AX
                                         ;store the vector
         MOV     ES: WORD PTR (4 * Tmr2Vec), OFFSET(Timer2EventHandler)
@@ -210,7 +210,7 @@ Timer2EventHandler   PROC    NEAR
 CallEventHandlers:
      
      CALL KeypadEventHandler		;reads the keys from keypad and enqueues the key events
-									;to EventBuf.
+				        ;to EventBuf.
      
      CALL DisplayEventHandler		;outputs the patterns to 7-segments LED displays
      
