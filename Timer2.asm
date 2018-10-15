@@ -2,9 +2,9 @@ NAME  Timer2
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;                                                                            ;
-;                                     Timer2                                  ;
-;                            Timer2 related functions                         ;
-;                           Glen George, Sunghoon Choi                       ;
+;                                     Timer2                                 ;
+;                            Timer2 related functions                        ;
+;                                  Sunghoon Choi                             ;
 ;                                                                            ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -15,20 +15,18 @@ NAME  Timer2
 ; Table of Contents:
 ;    InitTimer2           - Initialize timer 2 interrupts and variables
 ;    InstallTimer2Handler - Install the timer 2 event handler
-;    Timer2EventHandler   - Timer 2 Event Handler which calls
-;						    DisplayEventHandler and KeypadEventHandler
+;    Timer2EventHandler   - Timer 2 Event Handler which calls  DisplayEventHandler and KeypadEventHandler
+;						   
 ;
 ; Revision History:
-;    10/25/2016		Sunghoon Choi	Created
-;	 10/25/2016		Sunghoon Choi	Revised Timer2EventHandler by
-;									adding the call to DisplayEventHandler
-;	 10/26/2016		Sunghoon Choi	Updated documentation for
-;									Timer2EventHandler
-;	 10/31/2016     Sunghoon Choi   Added the call to KeypadEventHandler
-;	 11/4/2016		Sunghoon Choi	Changed the file and function names
-;									InitTimer -> InitTimer2
-;									InstallTimerHandler -> InstallTimer2Handler
-;									Timer.asm -> Timer2.asm
+;    10/25/2016	       Sunghoon Choi    Created
+;    10/25/2016	       Sunghoon Choi    Revised Timer2EventHandler by adding the call to DisplayEventHandler
+;    10/26/2016	       Sunghoon Choi    Updated documentation for Timer2EventHandler
+;    10/31/2016        Sunghoon Choi    Added the call to KeypadEventHandler
+;    11/4/2016         Sunghoon Choi    Changed the file and function names
+;                                              InitTimer -> InitTimer2
+;                                              InstallTimerHandler -> InstallTimer2Handler
+;                                              Timer.asm -> Timer2.asm
 
 
 
@@ -77,7 +75,7 @@ CODE SEGMENT PUBLIC 'CODE'
 ; Special Notes:    None
 ; Author:            Glen George, Sunghoon Choi
 ; Revision History:  10/11/1998  - Last modified   by Glen George	
-;					 10/28/2016  - Last modified   by Sunghoon Choi
+;                    10/28/2016  - Last modified   by Sunghoon Choi
 InitTimer2       PROC    NEAR
                  PUBLIC  InitTimer2
 
@@ -144,7 +142,7 @@ InitTimer2       ENDP
 ; Special Notes:    None
 ; Author:            Glen George, Sunghoon Choi
 ; Revision History:  01/28/2002  - Last modified by Glen George
-;					 10/28/2016  - Comments revised by Sunghoon Choi
+;                    10/28/2016  - Comments revised by Sunghoon Choi
 
 InstallTimer2Handler     PROC    NEAR
                         PUBLIC  InstallTimer2Handler
@@ -200,11 +198,10 @@ InstallTimer2Handler     ENDP
 ; Known bugs:       None
 ; Special Notes:    None
 ; Author:            Glen George, Sunghoon Choi
-; Revision History:     10/11/1998 - Last modified - by Glen George
-;						10/29/2016 - changed the EventHandler being called 
-;									 to DisplayEventHandler - by Sunghoon Choi
-;						10/31/2016 - added KeypadEventHandler - by Sunghoon Choi
-;						11/4/2016  - Revised functional specification for keypad routines.
+; Revision History:     10/11/1998 - Last modified by Glen George
+;                       10/29/2016 - changed the EventHandler being called  to DisplayEventHandler by Sunghoon Choi					
+;                       10/31/2016 - added KeypadEventHandler by Sunghoon Choi
+;                       11/4/2016  - Revised functional specification for keypad routines by Sunghoon Choi
 
 Timer2EventHandler   PROC    NEAR
                      
