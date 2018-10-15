@@ -70,7 +70,7 @@ CODE SEGMENT PUBLIC 'CODE'
 ; Registers Changed: flags, AX, DX
 ; Stack Depth:       0 word
 ;
-; Limitations:		None 
+; Limitations:	    None 
 ; Known bugs:       None
 ; Special Notes:    None
 ; Author:            Glen George, Sunghoon Choi
@@ -137,7 +137,7 @@ InitTimer2       ENDP
 ; Registers Changed: flags, AX, ES
 ; Stack Depth:       0 words
 ;
-; Limitations:	    None 
+; Limitations:      None 
 ; Known bugs:       None
 ; Special Notes:    None
 ; Author:            Glen George, Sunghoon Choi
