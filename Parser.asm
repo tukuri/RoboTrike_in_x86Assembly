@@ -1740,7 +1740,7 @@ CODE ENDS
    
 DATA SEGMENT PUBLIC 'DATA'
     ArgNum        DW      ?    ;The argument value for the action functions
-    ArgSign        DB        ? ;Sign of ArgNum
+    ArgSign        DB     ?    ;Sign of ArgNum
     ParserState DB        ?    ;Current state of the parsing state machine.                    
 DATA ENDS
                 
