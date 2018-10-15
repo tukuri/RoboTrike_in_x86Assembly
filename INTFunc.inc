@@ -2,8 +2,7 @@
 ;                                                                            ;
 ;                                  INTFunc.inc                               ;
 ;                         Interrupt Controller Constants                     ;
-;                            Glen George, Sunghoon Choi                      ;
-;                                                                            ;
+;                           Glen George, Sunghoon Choi                       ;
 ;                                                                            ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Description: 
