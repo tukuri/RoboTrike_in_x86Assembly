@@ -136,14 +136,14 @@ InitTimer1       ENDP
 ; Special Notes:    None
 ; Author:            Glen George, Sunghoon Choi
 ; Revision History:  01/28/2002  - Last modified by Glen George
-;					 11/11/2016  - Comments revised by Sunghoon Choi
+;		     11/11/2016  - Comments revised by Sunghoon Choi
 
 InstallTimer1Handler     PROC    NEAR
                         PUBLIC  InstallTimer1Handler
 
 
         XOR     AX, AX                  ;clear ES 
-										;(interrupt vectors are in segment 0)
+					;(interrupt vectors are in segment 0)
         MOV     ES, AX
                                         ;store the vector
         MOV     ES: WORD PTR (4 * Tmr1Vec), OFFSET(Timer1EventHandler)
@@ -160,13 +160,12 @@ InstallTimer1Handler     ENDP
 ; Timer1EventHandler
 ;
 ; Description:       This procedure is the event handler for the timer 1
-;                    interrupt. It calls MotorLaserEventHandler to output to motors and 
-;					 laser.
+;                    interrupt. It calls MotorLaserEventHandler to output to motors and laser.
 ;
 ; Operation:         First, it pushes all register and flags. 
-;					 Then, it calls MotorLaserEventHandler to output to the motors and
-;					 laser. When MotorLaserEventHandler is done, it sends EOI to the 
-;					 interrupt controller.
+;		     Then, it calls MotorLaserEventHandler to output to the motors and
+;		     laser. When MotorLaserEventHandler is done, it sends EOI to the 
+;		     interrupt controller.
 ;
 ; Arguments:         None.
 ; Return Value:      None.
@@ -191,14 +190,13 @@ InstallTimer1Handler     ENDP
 ; Special Notes:    None
 ; Author:            Glen George, Sunghoon Choi
 ; Revision History:     10/11/1998 - Last modified - by Glen George
-;						11/6/2016  - Replaced the existing eventhandler with 
-;									 MotorLaserEventHandler. - by Sunghoon Choi
-;						11/11/2016 - Updated documentation.  - by Sunghoon Choi
+;			11/6/2016  - Replaced the existing eventhandler with MotorLaserEventHandler. - by Sunghoon Choi
+;			11/11/2016 - Updated documentation.  - by Sunghoon Choi
 
 Timer1EventHandler   PROC    NEAR
                      
                      
-        PUSHA                     ;save any registers that are used
+        PUSHA                           ;save any registers that are used
 CallEventHandlers:
      
      CALL MotorLaserEventHandler	;Output to motors and laser.
