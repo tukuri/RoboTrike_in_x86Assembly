@@ -19,8 +19,8 @@ NAME  Timer1
 ;						    
 ;
 ; Revision History:
-;    11/6/2016     Created                                      -     Sunghoon Choi
-;    11/9/2016     Changed Timer1 interrupt frequency to 4KHz   -     Sunghoon Choi			
+;    11/6/2016     Created                                      -   Sunghoon Choi
+;    11/9/2016     Changed Timer1 interrupt frequency to 4KHz   -   Sunghoon Choi			
 ;    11/11/2016    Updated Documentation                        -   Sunghoon Choi
 
 
@@ -136,7 +136,7 @@ InitTimer1       ENDP
 ; Special Notes:    None
 ; Author:            Glen George, Sunghoon Choi
 ; Revision History:  01/28/2002  - Last modified by Glen George
-;		     11/11/2016  - Comments revised by Sunghoon Choi
+;                    11/11/2016  - Comments revised by Sunghoon Choi
 
 InstallTimer1Handler     PROC    NEAR
                         PUBLIC  InstallTimer1Handler
@@ -185,13 +185,13 @@ InstallTimer1Handler     ENDP
 ; Registers Changed: None
 ; Stack Depth:       None
 ;
-; Limitations:		None 
+; Limitations:      None 
 ; Known bugs:       None
 ; Special Notes:    None
 ; Author:            Glen George, Sunghoon Choi
 ; Revision History:     10/11/1998 - Last modified - by Glen George
-;			11/6/2016  - Replaced the existing eventhandler with MotorLaserEventHandler. - by Sunghoon Choi
-;			11/11/2016 - Updated documentation.  - by Sunghoon Choi
+;                       11/6/2016  - Replaced the existing eventhandler with MotorLaserEventHandler. - by Sunghoon Choi
+;                       11/11/2016 - Updated documentation.  - by Sunghoon Choi
 
 Timer1EventHandler   PROC    NEAR
                      
