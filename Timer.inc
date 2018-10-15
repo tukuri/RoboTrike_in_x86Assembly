@@ -2,7 +2,7 @@
 ;                                                                            ;
 ;                                   Timer.inc                                ;
 ;                             Timer related functions                        ;
-;                            Glen Geroge, Sunghoon Choi                      ;
+;                                  Sunghoon Choi                             ;
 ;                                                                            ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
