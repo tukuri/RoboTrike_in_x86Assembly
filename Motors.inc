@@ -43,7 +43,7 @@ DUPSIGN_0DOT15_MUL2   EQU 2       ;Number of duplicated extra sign bits generate
                                   ;three sign bits, we must remove two extra sign bits
                                   ;from them.
 MAX_SPEED              EQU 65534  ;Maximum speed of RoboTrike
-MIN_SPEED              EQU 0      ;Minimu speed of RoboTrike
+MIN_SPEED              EQU 0      ;Minimum speed of RoboTrike
 
 POS_TURRET_ELEV_BOUND  EQU 60     ;The positive bound of turret elevation angle
 NEG_TURRET_ELEV_BOUND  EQU -60    ;The negative bound of turret elevation angle
