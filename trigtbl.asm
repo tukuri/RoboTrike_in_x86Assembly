@@ -1,0 +1,805 @@
+NAME  TRIG_TABLE
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;                                                                            ;
+;                                   TRIG_TABLE                               ;
+;                           Tables of normalized SIN/COS values              ;
+;                                                                            ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; This file contains the tables of sin and cosin values normalized to 32767. 
+; Integer values are provided for 1 degree increments from 0-360 degrees, and
+; normal rounding is used. 
+; The tables include are:
+;       Sin_Table - table of sine values for 0-360 degrees. 
+;       Cos_Table - table of consine values for 0-360 degrees.
+;
+; Revision History:
+;    02/20/2006   Xiaoliang (Lee) Zhu           initial revision
+
+
+
+; local include files
+;    none
+
+
+;setup code group and start the code segment
+CGROUP  GROUP   CODE
+
+CODE    SEGMENT PUBLIC 'CODE'
+
+
+; Sin_Table 
+;
+; Description:      This is the sin value table for 0-360 degrees. 
+;                   Normal rounding is used to generate the values. 
+;
+; Notes:            READ ONLY tables should always be in the code segment so
+;                   that in a standalone system it will be located in the
+;                   ROM with the code.
+;
+; Author:           Xiaoliang (Lee) Zhu
+; Last Modified:    Feb. 20. 2006
+
+Sin_Table       LABEL   WORD
+                PUBLIC  Sin_Table
+
+
+;       DW      normalized value (decimal)
+			
+        DW             0        ; 0 degrees
+        DW           572        ; 1 degrees
+        DW          1144        ; 2 degrees
+        DW          1715        ; 3 degrees
+        DW          2286        ; 4 degrees
+        DW          2856        ; 5 degrees
+        DW          3425        ; 6 degrees
+        DW          3993        ; 7 degrees
+        DW          4560        ; 8 degrees
+        DW          5126        ; 9 degrees
+        DW          5690        ; 10 degrees
+        DW          6252        ; 11 degrees
+        DW          6813        ; 12 degrees
+        DW          7371        ; 13 degrees
+        DW          7927        ; 14 degrees
+        DW          8481        ; 15 degrees
+        DW          9032        ; 16 degrees
+        DW          9580        ; 17 degrees
+        DW         10126        ; 18 degrees
+        DW         10668        ; 19 degrees
+        DW         11207        ; 20 degrees
+        DW         11743        ; 21 degrees
+        DW         12275        ; 22 degrees
+        DW         12803        ; 23 degrees
+        DW         13328        ; 24 degrees
+        DW         13848        ; 25 degrees
+        DW         14364        ; 26 degrees
+        DW         14876        ; 27 degrees
+        DW         15383        ; 28 degrees
+        DW         15886        ; 29 degrees
+        DW         16384        ; 30 degrees
+        DW         16876        ; 31 degrees
+        DW         17364        ; 32 degrees
+        DW         17846        ; 33 degrees
+        DW         18323        ; 34 degrees
+        DW         18794        ; 35 degrees
+        DW         19260        ; 36 degrees
+        DW         19720        ; 37 degrees
+        DW         20173        ; 38 degrees
+        DW         20621        ; 39 degrees
+        DW         21062        ; 40 degrees
+        DW         21497        ; 41 degrees
+        DW         21925        ; 42 degrees
+        DW         22347        ; 43 degrees
+        DW         22762        ; 44 degrees
+        DW         23170        ; 45 degrees
+        DW         23571        ; 46 degrees
+        DW         23964        ; 47 degrees
+        DW         24351        ; 48 degrees
+        DW         24730        ; 49 degrees
+        DW         25101        ; 50 degrees
+        DW         25465        ; 51 degrees
+        DW         25821        ; 52 degrees
+        DW         26169        ; 53 degrees
+        DW         26509        ; 54 degrees
+        DW         26841        ; 55 degrees
+        DW         27165        ; 56 degrees
+        DW         27481        ; 57 degrees
+        DW         27788        ; 58 degrees
+        DW         28087        ; 59 degrees
+        DW         28377        ; 60 degrees
+        DW         28659        ; 61 degrees
+        DW         28932        ; 62 degrees
+        DW         29196        ; 63 degrees
+        DW         29451        ; 64 degrees
+        DW         29697        ; 65 degrees
+        DW         29934        ; 66 degrees
+        DW         30162        ; 67 degrees
+        DW         30381        ; 68 degrees
+        DW         30591        ; 69 degrees
+        DW         30791        ; 70 degrees
+        DW         30982        ; 71 degrees
+        DW         31163        ; 72 degrees
+        DW         31335        ; 73 degrees
+        DW         31498        ; 74 degrees
+        DW         31650        ; 75 degrees
+        DW         31794        ; 76 degrees
+        DW         31927        ; 77 degrees
+        DW         32051        ; 78 degrees
+        DW         32165        ; 79 degrees
+        DW         32269        ; 80 degrees
+        DW         32364        ; 81 degrees
+        DW         32448        ; 82 degrees
+        DW         32523        ; 83 degrees
+        DW         32587        ; 84 degrees
+        DW         32642        ; 85 degrees
+        DW         32687        ; 86 degrees
+        DW         32722        ; 87 degrees
+        DW         32747        ; 88 degrees
+        DW         32762        ; 89 degrees
+        DW         32767        ; 90 degrees
+
+        DW         32762        ; 91 degrees
+        DW         32747        ; 92 degrees
+        DW         32722        ; 93 degrees
+        DW         32687        ; 94 degrees
+        DW         32642        ; 95 degrees
+        DW         32587        ; 96 degrees
+        DW         32523        ; 97 degrees
+        DW         32448        ; 98 degrees
+        DW         32364        ; 99 degrees
+        DW         32269        ; 100 degrees
+        DW         32165        ; 101 degrees
+        DW         32051        ; 102 degrees
+        DW         31927        ; 103 degrees
+        DW         31794        ; 104 degrees
+        DW         31650        ; 105 degrees
+        DW         31498        ; 106 degrees
+        DW         31335        ; 107 degrees
+        DW         31163        ; 108 degrees
+        DW         30982        ; 109 degrees
+        DW         30791        ; 110 degrees
+        DW         30591        ; 111 degrees
+        DW         30381        ; 112 degrees
+        DW         30162        ; 113 degrees
+        DW         29934        ; 114 degrees
+        DW         29697        ; 115 degrees
+        DW         29451        ; 116 degrees
+        DW         29196        ; 117 degrees
+        DW         28932        ; 118 degrees
+        DW         28659        ; 119 degrees
+        DW         28377        ; 120 degrees
+        DW         28087        ; 121 degrees
+        DW         27788        ; 122 degrees
+        DW         27481        ; 123 degrees
+        DW         27165        ; 124 degrees
+        DW         26841        ; 125 degrees
+        DW         26509        ; 126 degrees
+        DW         26169        ; 127 degrees
+        DW         25821        ; 128 degrees
+        DW         25465        ; 129 degrees
+        DW         25101        ; 130 degrees
+        DW         24730        ; 131 degrees
+        DW         24351        ; 132 degrees
+        DW         23964        ; 133 degrees
+        DW         23571        ; 134 degrees
+        DW         23170        ; 135 degrees
+        DW         22762        ; 136 degrees
+        DW         22347        ; 137 degrees
+        DW         21925        ; 138 degrees
+        DW         21497        ; 139 degrees
+        DW         21062        ; 140 degrees
+        DW         20621        ; 141 degrees
+        DW         20173        ; 142 degrees
+        DW         19720        ; 143 degrees
+        DW         19260        ; 144 degrees
+        DW         18794        ; 145 degrees
+        DW         18323        ; 146 degrees
+        DW         17846        ; 147 degrees
+        DW         17364        ; 148 degrees
+        DW         16876        ; 149 degrees
+        DW         16384        ; 150 degrees
+        DW         15886        ; 151 degrees
+        DW         15383        ; 152 degrees
+        DW         14876        ; 153 degrees
+        DW         14364        ; 154 degrees
+        DW         13848        ; 155 degrees
+        DW         13328        ; 156 degrees
+        DW         12803        ; 157 degrees
+        DW         12275        ; 158 degrees
+        DW         11743        ; 159 degrees
+        DW         11207        ; 160 degrees
+        DW         10668        ; 161 degrees
+        DW         10126        ; 162 degrees
+        DW          9580        ; 163 degrees
+        DW          9032        ; 164 degrees
+        DW          8481        ; 165 degrees
+        DW          7927        ; 166 degrees
+        DW          7371        ; 167 degrees
+        DW          6813        ; 168 degrees
+        DW          6252        ; 169 degrees
+        DW          5690        ; 170 degrees
+        DW          5126        ; 171 degrees
+        DW          4560        ; 172 degrees
+        DW          3993        ; 173 degrees
+        DW          3425        ; 174 degrees
+        DW          2856        ; 175 degrees
+        DW          2286        ; 176 degrees
+        DW          1715        ; 177 degrees
+        DW          1144        ; 178 degrees
+        DW           572        ; 179 degrees
+        DW             0        ; 180 degrees
+
+        DW          -572        ; 181 degrees
+        DW         -1144        ; 182 degrees
+        DW         -1715        ; 183 degrees
+        DW         -2286        ; 184 degrees
+        DW         -2856        ; 185 degrees
+        DW         -3425        ; 186 degrees
+        DW         -3993        ; 187 degrees
+        DW         -4560        ; 188 degrees
+        DW         -5126        ; 189 degrees
+        DW         -5690        ; 190 degrees
+        DW         -6252        ; 191 degrees
+        DW         -6813        ; 192 degrees
+        DW         -7371        ; 193 degrees
+        DW         -7927        ; 194 degrees
+        DW         -8481        ; 195 degrees
+        DW         -9032        ; 196 degrees
+        DW         -9580        ; 197 degrees
+        DW        -10126        ; 198 degrees
+        DW        -10668        ; 199 degrees
+        DW        -11207        ; 200 degrees
+        DW        -11743        ; 201 degrees
+        DW        -12275        ; 202 degrees
+        DW        -12803        ; 203 degrees
+        DW        -13328        ; 204 degrees
+        DW        -13848        ; 205 degrees
+        DW        -14364        ; 206 degrees
+        DW        -14876        ; 207 degrees
+        DW        -15383        ; 208 degrees
+        DW        -15886        ; 209 degrees
+        DW        -16384        ; 210 degrees
+        DW        -16876        ; 211 degrees
+        DW        -17364        ; 212 degrees
+        DW        -17846        ; 213 degrees
+        DW        -18323        ; 214 degrees
+        DW        -18794        ; 215 degrees
+        DW        -19260        ; 216 degrees
+        DW        -19720        ; 217 degrees
+        DW        -20173        ; 218 degrees
+        DW        -20621        ; 219 degrees
+        DW        -21062        ; 220 degrees
+        DW        -21497        ; 221 degrees
+        DW        -21925        ; 222 degrees
+        DW        -22347        ; 223 degrees
+        DW        -22762        ; 224 degrees
+        DW        -23170        ; 225 degrees
+        DW        -23571        ; 226 degrees
+        DW        -23964        ; 227 degrees
+        DW        -24351        ; 228 degrees
+        DW        -24730        ; 229 degrees
+        DW        -25101        ; 230 degrees
+        DW        -25465        ; 231 degrees
+        DW        -25821        ; 232 degrees
+        DW        -26169        ; 233 degrees
+        DW        -26509        ; 234 degrees
+        DW        -26841        ; 235 degrees
+        DW        -27165        ; 236 degrees
+        DW        -27481        ; 237 degrees
+        DW        -27788        ; 238 degrees
+        DW        -28087        ; 239 degrees
+        DW        -28377        ; 240 degrees
+        DW        -28659        ; 241 degrees
+        DW        -28932        ; 242 degrees
+        DW        -29196        ; 243 degrees
+        DW        -29451        ; 244 degrees
+        DW        -29697        ; 245 degrees
+        DW        -29934        ; 246 degrees
+        DW        -30162        ; 247 degrees
+        DW        -30381        ; 248 degrees
+        DW        -30591        ; 249 degrees
+        DW        -30791        ; 250 degrees
+        DW        -30982        ; 251 degrees
+        DW        -31163        ; 252 degrees
+        DW        -31335        ; 253 degrees
+        DW        -31498        ; 254 degrees
+        DW        -31650        ; 255 degrees
+        DW        -31794        ; 256 degrees
+        DW        -31927        ; 257 degrees
+        DW        -32051        ; 258 degrees
+        DW        -32165        ; 259 degrees
+        DW        -32269        ; 260 degrees
+        DW        -32364        ; 261 degrees
+        DW        -32448        ; 262 degrees
+        DW        -32523        ; 263 degrees
+        DW        -32587        ; 264 degrees
+        DW        -32642        ; 265 degrees
+        DW        -32687        ; 266 degrees
+        DW        -32722        ; 267 degrees
+        DW        -32747        ; 268 degrees
+        DW        -32762        ; 269 degrees
+        DW        -32767        ; 270 degrees
+
+        DW        -32762        ; 271 degrees
+        DW        -32747        ; 272 degrees
+        DW        -32722        ; 273 degrees
+        DW        -32687        ; 274 degrees
+        DW        -32642        ; 275 degrees
+        DW        -32587        ; 276 degrees
+        DW        -32523        ; 277 degrees
+        DW        -32448        ; 278 degrees
+        DW        -32364        ; 279 degrees
+        DW        -32269        ; 280 degrees
+        DW        -32165        ; 281 degrees
+        DW        -32051        ; 282 degrees
+        DW        -31927        ; 283 degrees
+        DW        -31794        ; 284 degrees
+        DW        -31650        ; 285 degrees
+        DW        -31498        ; 286 degrees
+        DW        -31335        ; 287 degrees
+        DW        -31163        ; 288 degrees
+        DW        -30982        ; 289 degrees
+        DW        -30791        ; 290 degrees
+        DW        -30591        ; 291 degrees
+        DW        -30381        ; 292 degrees
+        DW        -30162        ; 293 degrees
+        DW        -29934        ; 294 degrees
+        DW        -29697        ; 295 degrees
+        DW        -29451        ; 296 degrees
+        DW        -29196        ; 297 degrees
+        DW        -28932        ; 298 degrees
+        DW        -28659        ; 299 degrees
+        DW        -28377        ; 300 degrees
+        DW        -28087        ; 301 degrees
+        DW        -27788        ; 302 degrees
+        DW        -27481        ; 303 degrees
+        DW        -27165        ; 304 degrees
+        DW        -26841        ; 305 degrees
+        DW        -26509        ; 306 degrees
+        DW        -26169        ; 307 degrees
+        DW        -25821        ; 308 degrees
+        DW        -25465        ; 309 degrees
+        DW        -25101        ; 310 degrees
+        DW        -24730        ; 311 degrees
+        DW        -24351        ; 312 degrees
+        DW        -23964        ; 313 degrees
+        DW        -23571        ; 314 degrees
+        DW        -23170        ; 315 degrees
+        DW        -22762        ; 316 degrees
+        DW        -22347        ; 317 degrees
+        DW        -21925        ; 318 degrees
+        DW        -21497        ; 319 degrees
+        DW        -21062        ; 320 degrees
+        DW        -20621        ; 321 degrees
+        DW        -20173        ; 322 degrees
+        DW        -19720        ; 323 degrees
+        DW        -19260        ; 324 degrees
+        DW        -18794        ; 325 degrees
+        DW        -18323        ; 326 degrees
+        DW        -17846        ; 327 degrees
+        DW        -17364        ; 328 degrees
+        DW        -16876        ; 329 degrees
+        DW        -16384        ; 330 degrees
+        DW        -15886        ; 331 degrees
+        DW        -15383        ; 332 degrees
+        DW        -14876        ; 333 degrees
+        DW        -14364        ; 334 degrees
+        DW        -13848        ; 335 degrees
+        DW        -13328        ; 336 degrees
+        DW        -12803        ; 337 degrees
+        DW        -12275        ; 338 degrees
+        DW        -11743        ; 339 degrees
+        DW        -11207        ; 340 degrees
+        DW        -10668        ; 341 degrees
+        DW        -10126        ; 342 degrees
+        DW         -9580        ; 343 degrees
+        DW         -9032        ; 344 degrees
+        DW         -8481        ; 345 degrees
+        DW         -7927        ; 346 degrees
+        DW         -7371        ; 347 degrees
+        DW         -6813        ; 348 degrees
+        DW         -6252        ; 349 degrees
+        DW         -5690        ; 350 degrees
+        DW         -5126        ; 351 degrees
+        DW         -4560        ; 352 degrees
+        DW         -3993        ; 353 degrees
+        DW         -3425        ; 354 degrees
+        DW         -2856        ; 355 degrees
+        DW         -2286        ; 356 degrees
+        DW         -1715        ; 357 degrees
+        DW         -1144        ; 358 degrees
+        DW          -572        ; 359 degrees
+        DW             0        ; 360 degrees
+
+
+
+; Cos_Table 
+;
+; Description:      This is the Cos value table for 0-360 degrees. 
+;                   Normal rounding is used to generate the values. 
+;
+; Notes:            READ ONLY tables should always be in the code segment so
+;                   that in a standalone system it will be located in the
+;                   ROM with the code.
+;
+; Author:           Xiaoliang (Lee) Zhu
+; Last Modified:    Feb. 20. 2006
+
+Cos_Table       LABEL   WORD
+                PUBLIC  Cos_Table
+
+
+;       DW      normalized value (decimal)	
+	
+
+        DW         32767        ; 0 degrees
+        DW         32762        ; 1 degrees
+        DW         32747        ; 2 degrees
+        DW         32722        ; 3 degrees
+        DW         32687        ; 4 degrees
+        DW         32642        ; 5 degrees
+        DW         32587        ; 6 degrees
+        DW         32523        ; 7 degrees
+        DW         32448        ; 8 degrees
+        DW         32364        ; 9 degrees
+        DW         32269        ; 10 degrees
+        DW         32165        ; 11 degrees
+        DW         32051        ; 12 degrees
+        DW         31927        ; 13 degrees
+        DW         31794        ; 14 degrees
+        DW         31650        ; 15 degrees
+        DW         31498        ; 16 degrees
+        DW         31335        ; 17 degrees
+        DW         31163        ; 18 degrees
+        DW         30982        ; 19 degrees
+        DW         30791        ; 20 degrees
+        DW         30591        ; 21 degrees
+        DW         30381        ; 22 degrees
+        DW         30162        ; 23 degrees
+        DW         29934        ; 24 degrees
+        DW         29697        ; 25 degrees
+        DW         29451        ; 26 degrees
+        DW         29196        ; 27 degrees
+        DW         28932        ; 28 degrees
+        DW         28659        ; 29 degrees
+        DW         28377        ; 30 degrees
+        DW         28087        ; 31 degrees
+        DW         27788        ; 32 degrees
+        DW         27481        ; 33 degrees
+        DW         27165        ; 34 degrees
+        DW         26841        ; 35 degrees
+        DW         26509        ; 36 degrees
+        DW         26169        ; 37 degrees
+        DW         25821        ; 38 degrees
+        DW         25465        ; 39 degrees
+        DW         25101        ; 40 degrees
+        DW         24730        ; 41 degrees
+        DW         24351        ; 42 degrees
+        DW         23964        ; 43 degrees
+        DW         23571        ; 44 degrees
+        DW         23170        ; 45 degrees
+        DW         22762        ; 46 degrees
+        DW         22347        ; 47 degrees
+        DW         21925        ; 48 degrees
+        DW         21497        ; 49 degrees
+        DW         21062        ; 50 degrees
+        DW         20621        ; 51 degrees
+        DW         20173        ; 52 degrees
+        DW         19720        ; 53 degrees
+        DW         19260        ; 54 degrees
+        DW         18794        ; 55 degrees
+        DW         18323        ; 56 degrees
+        DW         17846        ; 57 degrees
+        DW         17364        ; 58 degrees
+        DW         16876        ; 59 degrees
+        DW         16384        ; 60 degrees
+        DW         15886        ; 61 degrees
+        DW         15383        ; 62 degrees
+        DW         14876        ; 63 degrees
+        DW         14364        ; 64 degrees
+        DW         13848        ; 65 degrees
+        DW         13328        ; 66 degrees
+        DW         12803        ; 67 degrees
+        DW         12275        ; 68 degrees
+        DW         11743        ; 69 degrees
+        DW         11207        ; 70 degrees
+        DW         10668        ; 71 degrees
+        DW         10126        ; 72 degrees
+        DW          9580        ; 73 degrees
+        DW          9032        ; 74 degrees
+        DW          8481        ; 75 degrees
+        DW          7927        ; 76 degrees
+        DW          7371        ; 77 degrees
+        DW          6813        ; 78 degrees
+        DW          6252        ; 79 degrees
+        DW          5690        ; 80 degrees
+        DW          5126        ; 81 degrees
+        DW          4560        ; 82 degrees
+        DW          3993        ; 83 degrees
+        DW          3425        ; 84 degrees
+        DW          2856        ; 85 degrees
+        DW          2286        ; 86 degrees
+        DW          1715        ; 87 degrees
+        DW          1144        ; 88 degrees
+        DW           572        ; 89 degrees
+        DW             0        ; 90 degrees
+
+        DW          -572        ; 91 degrees
+        DW         -1144        ; 92 degrees
+        DW         -1715        ; 93 degrees
+        DW         -2286        ; 94 degrees
+        DW         -2856        ; 95 degrees
+        DW         -3425        ; 96 degrees
+        DW         -3993        ; 97 degrees
+        DW         -4560        ; 98 degrees
+        DW         -5126        ; 99 degrees
+        DW         -5690        ; 100 degrees
+        DW         -6252        ; 101 degrees
+        DW         -6813        ; 102 degrees
+        DW         -7371        ; 103 degrees
+        DW         -7927        ; 104 degrees
+        DW         -8481        ; 105 degrees
+        DW         -9032        ; 106 degrees
+        DW         -9580        ; 107 degrees
+        DW        -10126        ; 108 degrees
+        DW        -10668        ; 109 degrees
+        DW        -11207        ; 110 degrees
+        DW        -11743        ; 111 degrees
+        DW        -12275        ; 112 degrees
+        DW        -12803        ; 113 degrees
+        DW        -13328        ; 114 degrees
+        DW        -13848        ; 115 degrees
+        DW        -14364        ; 116 degrees
+        DW        -14876        ; 117 degrees
+        DW        -15383        ; 118 degrees
+        DW        -15886        ; 119 degrees
+        DW        -16384        ; 120 degrees
+        DW        -16876        ; 121 degrees
+        DW        -17364        ; 122 degrees
+        DW        -17846        ; 123 degrees
+        DW        -18323        ; 124 degrees
+        DW        -18794        ; 125 degrees
+        DW        -19260        ; 126 degrees
+        DW        -19720        ; 127 degrees
+        DW        -20173        ; 128 degrees
+        DW        -20621        ; 129 degrees
+        DW        -21062        ; 130 degrees
+        DW        -21497        ; 131 degrees
+        DW        -21925        ; 132 degrees
+        DW        -22347        ; 133 degrees
+        DW        -22762        ; 134 degrees
+        DW        -23170        ; 135 degrees
+        DW        -23571        ; 136 degrees
+        DW        -23964        ; 137 degrees
+        DW        -24351        ; 138 degrees
+        DW        -24730        ; 139 degrees
+        DW        -25101        ; 140 degrees
+        DW        -25465        ; 141 degrees
+        DW        -25821        ; 142 degrees
+        DW        -26169        ; 143 degrees
+        DW        -26509        ; 144 degrees
+        DW        -26841        ; 145 degrees
+        DW        -27165        ; 146 degrees
+        DW        -27481        ; 147 degrees
+        DW        -27788        ; 148 degrees
+        DW        -28087        ; 149 degrees
+        DW        -28377        ; 150 degrees
+        DW        -28659        ; 151 degrees
+        DW        -28932        ; 152 degrees
+        DW        -29196        ; 153 degrees
+        DW        -29451        ; 154 degrees
+        DW        -29697        ; 155 degrees
+        DW        -29934        ; 156 degrees
+        DW        -30162        ; 157 degrees
+        DW        -30381        ; 158 degrees
+        DW        -30591        ; 159 degrees
+        DW        -30791        ; 160 degrees
+        DW        -30982        ; 161 degrees
+        DW        -31163        ; 162 degrees
+        DW        -31335        ; 163 degrees
+        DW        -31498        ; 164 degrees
+        DW        -31650        ; 165 degrees
+        DW        -31794        ; 166 degrees
+        DW        -31927        ; 167 degrees
+        DW        -32051        ; 168 degrees
+        DW        -32165        ; 169 degrees
+        DW        -32269        ; 170 degrees
+        DW        -32364        ; 171 degrees
+        DW        -32448        ; 172 degrees
+        DW        -32523        ; 173 degrees
+        DW        -32587        ; 174 degrees
+        DW        -32642        ; 175 degrees
+        DW        -32687        ; 176 degrees
+        DW        -32722        ; 177 degrees
+        DW        -32747        ; 178 degrees
+        DW        -32762        ; 179 degrees
+        DW        -32767        ; 180 degrees
+
+        DW        -32762        ; 181 degrees
+        DW        -32747        ; 182 degrees
+        DW        -32722        ; 183 degrees
+        DW        -32687        ; 184 degrees
+        DW        -32642        ; 185 degrees
+        DW        -32587        ; 186 degrees
+        DW        -32523        ; 187 degrees
+        DW        -32448        ; 188 degrees
+        DW        -32364        ; 189 degrees
+        DW        -32269        ; 190 degrees
+        DW        -32165        ; 191 degrees
+        DW        -32051        ; 192 degrees
+        DW        -31927        ; 193 degrees
+        DW        -31794        ; 194 degrees
+        DW        -31650        ; 195 degrees
+        DW        -31498        ; 196 degrees
+        DW        -31335        ; 197 degrees
+        DW        -31163        ; 198 degrees
+        DW        -30982        ; 199 degrees
+        DW        -30791        ; 200 degrees
+        DW        -30591        ; 201 degrees
+        DW        -30381        ; 202 degrees
+        DW        -30162        ; 203 degrees
+        DW        -29934        ; 204 degrees
+        DW        -29697        ; 205 degrees
+        DW        -29451        ; 206 degrees
+        DW        -29196        ; 207 degrees
+        DW        -28932        ; 208 degrees
+        DW        -28659        ; 209 degrees
+        DW        -28377        ; 210 degrees
+        DW        -28087        ; 211 degrees
+        DW        -27788        ; 212 degrees
+        DW        -27481        ; 213 degrees
+        DW        -27165        ; 214 degrees
+        DW        -26841        ; 215 degrees
+        DW        -26509        ; 216 degrees
+        DW        -26169        ; 217 degrees
+        DW        -25821        ; 218 degrees
+        DW        -25465        ; 219 degrees
+        DW        -25101        ; 220 degrees
+        DW        -24730        ; 221 degrees
+        DW        -24351        ; 222 degrees
+        DW        -23964        ; 223 degrees
+        DW        -23571        ; 224 degrees
+        DW        -23170        ; 225 degrees
+        DW        -22762        ; 226 degrees
+        DW        -22347        ; 227 degrees
+        DW        -21925        ; 228 degrees
+        DW        -21497        ; 229 degrees
+        DW        -21062        ; 230 degrees
+        DW        -20621        ; 231 degrees
+        DW        -20173        ; 232 degrees
+        DW        -19720        ; 233 degrees
+        DW        -19260        ; 234 degrees
+        DW        -18794        ; 235 degrees
+        DW        -18323        ; 236 degrees
+        DW        -17846        ; 237 degrees
+        DW        -17364        ; 238 degrees
+        DW        -16876        ; 239 degrees
+        DW        -16384        ; 240 degrees
+        DW        -15886        ; 241 degrees
+        DW        -15383        ; 242 degrees
+        DW        -14876        ; 243 degrees
+        DW        -14364        ; 244 degrees
+        DW        -13848        ; 245 degrees
+        DW        -13328        ; 246 degrees
+        DW        -12803        ; 247 degrees
+        DW        -12275        ; 248 degrees
+        DW        -11743        ; 249 degrees
+        DW        -11207        ; 250 degrees
+        DW        -10668        ; 251 degrees
+        DW        -10126        ; 252 degrees
+        DW         -9580        ; 253 degrees
+        DW         -9032        ; 254 degrees
+        DW         -8481        ; 255 degrees
+        DW         -7927        ; 256 degrees
+        DW         -7371        ; 257 degrees
+        DW         -6813        ; 258 degrees
+        DW         -6252        ; 259 degrees
+        DW         -5690        ; 260 degrees
+        DW         -5126        ; 261 degrees
+        DW         -4560        ; 262 degrees
+        DW         -3993        ; 263 degrees
+        DW         -3425        ; 264 degrees
+        DW         -2856        ; 265 degrees
+        DW         -2286        ; 266 degrees
+        DW         -1715        ; 267 degrees
+        DW         -1144        ; 268 degrees
+        DW          -572        ; 269 degrees
+        DW             0        ; 270 degrees
+
+        DW           572        ; 271 degrees
+        DW          1144        ; 272 degrees
+        DW          1715        ; 273 degrees
+        DW          2286        ; 274 degrees
+        DW          2856        ; 275 degrees
+        DW          3425        ; 276 degrees
+        DW          3993        ; 277 degrees
+        DW          4560        ; 278 degrees
+        DW          5126        ; 279 degrees
+        DW          5690        ; 280 degrees
+        DW          6252        ; 281 degrees
+        DW          6813        ; 282 degrees
+        DW          7371        ; 283 degrees
+        DW          7927        ; 284 degrees
+        DW          8481        ; 285 degrees
+        DW          9032        ; 286 degrees
+        DW          9580        ; 287 degrees
+        DW         10126        ; 288 degrees
+        DW         10668        ; 289 degrees
+        DW         11207        ; 290 degrees
+        DW         11743        ; 291 degrees
+        DW         12275        ; 292 degrees
+        DW         12803        ; 293 degrees
+        DW         13328        ; 294 degrees
+        DW         13848        ; 295 degrees
+        DW         14364        ; 296 degrees
+        DW         14876        ; 297 degrees
+        DW         15383        ; 298 degrees
+        DW         15886        ; 299 degrees
+        DW         16384        ; 300 degrees
+        DW         16876        ; 301 degrees
+        DW         17364        ; 302 degrees
+        DW         17846        ; 303 degrees
+        DW         18323        ; 304 degrees
+        DW         18794        ; 305 degrees
+        DW         19260        ; 306 degrees
+        DW         19720        ; 307 degrees
+        DW         20173        ; 308 degrees
+        DW         20621        ; 309 degrees
+        DW         21062        ; 310 degrees
+        DW         21497        ; 311 degrees
+        DW         21925        ; 312 degrees
+        DW         22347        ; 313 degrees
+        DW         22762        ; 314 degrees
+        DW         23170        ; 315 degrees
+        DW         23571        ; 316 degrees
+        DW         23964        ; 317 degrees
+        DW         24351        ; 318 degrees
+        DW         24730        ; 319 degrees
+        DW         25101        ; 320 degrees
+        DW         25465        ; 321 degrees
+        DW         25821        ; 322 degrees
+        DW         26169        ; 323 degrees
+        DW         26509        ; 324 degrees
+        DW         26841        ; 325 degrees
+        DW         27165        ; 326 degrees
+        DW         27481        ; 327 degrees
+        DW         27788        ; 328 degrees
+        DW         28087        ; 329 degrees
+        DW         28377        ; 330 degrees
+        DW         28659        ; 331 degrees
+        DW         28932        ; 332 degrees
+        DW         29196        ; 333 degrees
+        DW         29451        ; 334 degrees
+        DW         29697        ; 335 degrees
+        DW         29934        ; 336 degrees
+        DW         30162        ; 337 degrees
+        DW         30381        ; 338 degrees
+        DW         30591        ; 339 degrees
+        DW         30791        ; 340 degrees
+        DW         30982        ; 341 degrees
+        DW         31163        ; 342 degrees
+        DW         31335        ; 343 degrees
+        DW         31498        ; 344 degrees
+        DW         31650        ; 345 degrees
+        DW         31794        ; 346 degrees
+        DW         31927        ; 347 degrees
+        DW         32051        ; 348 degrees
+        DW         32165        ; 349 degrees
+        DW         32269        ; 350 degrees
+        DW         32364        ; 351 degrees
+        DW         32448        ; 352 degrees
+        DW         32523        ; 353 degrees
+        DW         32587        ; 354 degrees
+        DW         32642        ; 355 degrees
+        DW         32687        ; 356 degrees
+        DW         32722        ; 357 degrees
+        DW         32747        ; 358 degrees
+        DW         32762        ; 359 degrees
+        DW         32767        ; 360 degrees
+
+CODE    ENDS
+
+
+
+        END
