@@ -59,8 +59,7 @@ CODE SEGMENT PUBLIC 'CODE'
 ; Author:            Glen George, Sunghoon Choi
 ;
 ; Revision History:  07/12/2010  Last modified by Glen Geroge
-;                    10/28/2016  PCS and MPCS register variable's name 
-;                                changed by Sunghoon Choi
+;                    10/28/2016  PCS and MPCS register names changed by Sunghoon Choi
 InitCS  PROC    NEAR
         PUBLIC  InitCS
 
