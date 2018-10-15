@@ -2,9 +2,9 @@ NAME  Timer1
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;                                                                            ;
-;                                     Timer1                                  ;
-;                            Timer1 related functions                         ;
-;                           Glen George, Sunghoon Choi                       ;
+;                                    Timer1                                  ;
+;                            Timer1 related functions                        ;
+;                                 Sunghoon Choi                              ; 
 ;                                                                            ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -15,14 +15,13 @@ NAME  Timer1
 ; Table of Contents:
 ;    InitTimer1           - Initialize timer 1 interrupts and variables
 ;    InstallTimer1Handler - Install the timer 1 event handler
-;    Timer1EventHandler   - Timer 1 Event Handler which calls
-;						    MotorLaserEventHandler
+;    Timer1EventHandler   - Timer 1 Event Handler which calls MotorLaserEventHandler
+;						    
 ;
 ; Revision History:
-;     11/6/2016		Created						-	Sunghoon Choi
-;	  11/9/2016		Changed Timer1 interrupt 	-	Sunghoon Choi
-;					frequency to 4KHz
-;	  11/11/2016	Updated Documentation		-   Sunghoon Choi
+;    11/6/2016	     Created		                        -     Sunghoon Choi
+;    11/9/2016       Changed Timer1 interrupt frequency to 4KHz	-     Sunghoon Choi			
+;    11/11/2016      Updated Documentation                      -   Sunghoon Choi
 
 
 
@@ -42,7 +41,7 @@ CODE SEGMENT PUBLIC 'CODE'
 ; Description:       This function initializes timer 1
 ;
 ; Operation:         Timer 1 is initialized to generate interrupts at every 0.25ms.
-;					 The interrupt controller is also initialized
+;                    The interrupt controller is also initialized
 ;                    to allow the timer interrupts.  Timer #1 is used to scale
 ;                    the internal clock from 2.304 MHz to 4 KHz and generate the
 ;                    interrupts. 
@@ -70,7 +69,7 @@ CODE SEGMENT PUBLIC 'CODE'
 ; Special Notes:    None
 ; Author:            Glen George, Sunghoon Choi
 ; Revision History:  10/11/1998  - Last modified   by Glen George	
-;					 11/11/2016  - Last modified   by Sunghoon Choi
+;                    11/11/2016  - Last modified   by Sunghoon Choi
 InitTimer1       PROC    NEAR
                  PUBLIC  InitTimer1
 
