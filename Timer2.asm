@@ -47,7 +47,7 @@ CODE SEGMENT PUBLIC 'CODE'
 ; Description:       This function initializes timer 2
 ;
 ; Operation:         Timer 2 is initialized to generate interrupts every 1 ms.  
-;					 The interrupt controller is also initialized
+;                    The interrupt controller is also initialized
 ;                    to allow the timer interrupts.  Timer #2 is used to scale
 ;                    the internal clock from 2 MHz to 1 KHz and generate the
 ;                    interrupts. 
