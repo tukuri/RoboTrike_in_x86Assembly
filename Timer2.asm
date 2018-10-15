@@ -194,9 +194,9 @@ InstallTimer2Handler     ENDP
 ; Registers Changed: None
 ; Stack Depth:       None
 ;
-; Limitations:	    None 
-; Known bugs:       None
-; Special Notes:    None
+; Limitations:       None 
+; Known bugs:        None
+; Special Notes:     None
 ; Author:            Glen George, Sunghoon Choi
 ; Revision History:     10/11/1998 - Last modified by Glen George
 ;                       10/29/2016 - changed the EventHandler being called  to DisplayEventHandler by Sunghoon Choi					
