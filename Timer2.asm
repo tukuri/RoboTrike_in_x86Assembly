@@ -19,9 +19,9 @@ NAME  Timer2
 ;						   
 ;
 ; Revision History:
-;    10/25/2016	       Sunghoon Choi    Created
-;    10/25/2016	       Sunghoon Choi    Revised Timer2EventHandler by adding the call to DisplayEventHandler
-;    10/26/2016	       Sunghoon Choi    Updated documentation for Timer2EventHandler
+;    10/25/2016        Sunghoon Choi    Created
+;    10/25/2016        Sunghoon Choi    Revised Timer2EventHandler by adding the call to DisplayEventHandler
+;    10/26/2016        Sunghoon Choi    Updated documentation for Timer2EventHandler
 ;    10/31/2016        Sunghoon Choi    Added the call to KeypadEventHandler
 ;    11/4/2016         Sunghoon Choi    Changed the file and function names
 ;                                              InitTimer -> InitTimer2
