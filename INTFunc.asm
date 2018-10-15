@@ -4,7 +4,7 @@ NAME  INTFunc
 ;                                                                            ;
 ;                                 INTFunc                                    ;
 ;                         Interrupt related functions                        ;
-;                          Glen George,Sunghoon Choi                         ;
+;                               Sunghoon Choi                                ;
 ;                                                                            ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
