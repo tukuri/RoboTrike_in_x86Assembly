@@ -137,7 +137,7 @@ InitTimer2       ENDP
 ; Registers Changed: flags, AX, ES
 ; Stack Depth:       0 words
 ;
-; Limitations:		None 
+; Limitations:	    None 
 ; Known bugs:       None
 ; Special Notes:    None
 ; Author:            Glen George, Sunghoon Choi
@@ -149,7 +149,7 @@ InstallTimer2Handler     PROC    NEAR
 
 
         XOR     AX, AX                  ;clear ES 
-										;(interrupt vectors are in segment 0)
+			                ;(interrupt vectors are in segment 0)
         MOV     ES, AX
                                         ;store the vector
         MOV     ES: WORD PTR (4 * Tmr2Vec), OFFSET(Timer2EventHandler)
@@ -167,14 +167,14 @@ InstallTimer2Handler     ENDP
 ;
 ; Description:       This procedure is the event handler for the timer
 ;                    interrupt.  It calls KeypadEventHandler to read the keys
-;					 and calls DisplayEventHandler to output patterns on LEDs. .
+;		     and calls DisplayEventHandler to output patterns on LEDs. .
 ;
 ; Operation:         First, it pushes all register and flags. 
-;					 Then, it calls KeypadEventHandler to read the keys from keypad and
-;					 calls DisplayEventHandler to output the pattern values
-;					 to 7-Segment LED digits.
-;					 When KeypadEventHandler and DisplayEventHandler are done,
-;					 it sends EOI to the interrupt controller.
+;		     Then, it calls KeypadEventHandler to read the keys from keypad and
+;		     calls DisplayEventHandler to output the pattern values
+;		     to 7-Segment LED digits.
+;		     When KeypadEventHandler and DisplayEventHandler are done,
+;		     it sends EOI to the interrupt controller.
 ;
 ; Arguments:         None.
 ; Return Value:      None.
@@ -194,7 +194,7 @@ InstallTimer2Handler     ENDP
 ; Registers Changed: None
 ; Stack Depth:       None
 ;
-; Limitations:		None 
+; Limitations:	    None 
 ; Known bugs:       None
 ; Special Notes:    None
 ; Author:            Glen George, Sunghoon Choi
