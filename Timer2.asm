@@ -38,9 +38,9 @@ CODE SEGMENT PUBLIC 'CODE'
 
         ASSUME  CS:CGROUP
         EXTRN KeypadEventHandler:NEAR	;The eventhandler which reads the keys from
-										;keypad and enqueues the key events to EventBuf.
+	                                ;keypad and enqueues the key events to EventBuf.
         EXTRN DisplayEventHandler:NEAR	;The eventhandler which outputs
-										;the patterns to 7-segments LED displays
+                                        ;the patterns to 7-segments LED displays
 		
 ; InitTimer2
 ;
