@@ -16,6 +16,6 @@
 MOTOR_TX_BUFFER_LEN     EQU      9  ;The length of MotorTxBuffer
 STATUS_BUFFER_LEN       EQU      8  ;The length of StatusBuffer
 
-LASER_CHAR          EQU     'L'
-SPEED_CHAR          EQU     'S'
-DIRECTION_CHAR      EQU     'D'
+LASER_CHAR              EQU     'L'
+SPEED_CHAR              EQU     'S'
+DIRECTION_CHAR          EQU     'D'
