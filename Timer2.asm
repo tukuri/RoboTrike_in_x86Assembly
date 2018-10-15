@@ -70,7 +70,7 @@ CODE SEGMENT PUBLIC 'CODE'
 ; Registers Changed: flags, AX, DX
 ; Stack Depth:       0 word
 ;
-; Limitations:	    None 
+; Limitations:      None 
 ; Known bugs:       None
 ; Special Notes:    None
 ; Author:            Glen George, Sunghoon Choi
@@ -206,7 +206,7 @@ InstallTimer2Handler     ENDP
 Timer2EventHandler   PROC    NEAR
                      
                      
-        PUSHA                     ;save any registers that are used
+        PUSHA                           ;save any registers that are used
 CallEventHandlers:
      
      CALL KeypadEventHandler		;reads the keys from keypad and enqueues the key events
