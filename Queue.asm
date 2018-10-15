@@ -4,7 +4,7 @@ NAME QUEUE
 ;                                                                            ;
 ;                                 Queue.asm                                  ;
 ;                                 Homework3                                  ;
-;                                 Sunghoon Choi                              ;
+;                                Sunghoon Choi                               ;
 ;                                                                            ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
