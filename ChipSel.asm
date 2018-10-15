@@ -2,7 +2,7 @@ NAME    ChipSel
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;                                                                            ;
 ;                                   ChipSel                                  ;
-;                         Glen George, Sunghoon Choi                         ;
+;                                 Sunghoon Choi                              ;
 ;                                                                            ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -18,7 +18,7 @@ NAME    ChipSel
 ;    10/28/2016    Sunghoon Choi    Updated documentation
 
 
-$INCLUDE (ChipSel.inc)  ;include the file which contains constants for 
+$INCLUDE (ChipSel.inc)  ;Include the file which contains constants for 
                         ;ChipSel.asm
 
 CGROUP GROUP CODE
