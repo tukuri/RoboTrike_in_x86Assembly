@@ -62,7 +62,7 @@ CODE SEGMENT PUBLIC 'CODE'
 ; Algorithms:       None.
 ; Data Structures:  None.
 ;
-; Registers Used:   flags, AX, CX, SI, ES
+; Registers Used:   Flags, AX, CX, SI, ES
 ; Stack Depth:      1 word
 ;
 ; Limitations:      None  
