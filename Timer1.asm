@@ -19,9 +19,9 @@ NAME  Timer1
 ;						    
 ;
 ; Revision History:
-;    11/6/2016	     Created		                        -     Sunghoon Choi
-;    11/9/2016       Changed Timer1 interrupt frequency to 4KHz	-     Sunghoon Choi			
-;    11/11/2016      Updated Documentation                      -   Sunghoon Choi
+;    11/6/2016     Created                                      -     Sunghoon Choi
+;    11/9/2016     Changed Timer1 interrupt frequency to 4KHz   -     Sunghoon Choi			
+;    11/11/2016    Updated Documentation                        -   Sunghoon Choi
 
 
 
