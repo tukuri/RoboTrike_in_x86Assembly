@@ -1,6 +1,6 @@
 # Robotrike Project in x86 Assembly by Sung Hoon Choi 
 
-# Functional Specification for the Motors module
+## Functional Specification for the Motors module
                   
 **Description**: The Motors module has three omni-wheels driven by DC motors, one laser diode, and one turret driven by a servo motor and a stepper motor. The omni-wheels allow the RoboTrike to move all directions without rotating. It uses a vector calculation to move with the desired speed and direction. The wheels are placed 120 degrees from each other on the circular board. The turret’s rotation is controlled by a stepper motor while the elevation is controlled by a servo motor. However, the turret’s movements are not implemented.
 	It receives commands from the Remote module through the serial cable. It sends back the altered status to the Remote module if there’s any. It also transmits various error messages to the Remote module in case of errors. See the Error Handling Section for details.
@@ -39,7 +39,7 @@ Also, it transmits the altered status of the RoboTrike back to the Remote module
 
 **Special Notes**: Wireless communication between the Motors module and the Remote module should be implemented to enable free movements of the RoboTrike.
 
-# Functional Specification for the remote module
+## Functional Specification for the remote module
 
 **Description**: The remote module consists of eight 7-segment LED digit displays and 16 (4 keys per row) keys. When the user pushes a key, the corresponding command will be transmitted to the Motors module through the serial channel. Also, every time a command is transmitted to the Motors module, the changed status(speed, direction, laser) will be displayed on the LED digits. If the command did not change any status of the RoboTrike, LED digits will keep displaying the old message. It also displays various error messages in case of errors and resets in case of the system failure. See the Error Handling section for details. Note that the auto-repeat is implemented for the keys, so the user can keep pressing a key to execute a command for a large number of times.
 
