@@ -1,3 +1,5 @@
+# Robotrike Project in x86 Assembly by Sung Hoon Choi 
+
 # Functional Specification for the Motors module
                   
 **Description**: The Motors module has three omni-wheels driven by DC motors, one laser diode, and one turret driven by a servo motor and a stepper motor. The omni-wheels allow the RoboTrike to move all directions without rotating. It uses a vector calculation to move with the desired speed and direction. The wheels are placed 120 degrees from each other on the circular board. The turret’s rotation is controlled by a stepper motor while the elevation is controlled by a servo motor. However, the turret’s movements are not implemented.
