@@ -9,7 +9,9 @@
 
 **Output**:	The outputs of the Motors module are the DC motors(wheels), laser, and serial.
 	Three DC motors are placed 120 degrees from each other on the circular board. Since the RoboTrike uses omni-wheels, a vector calculation is applied to move in a desired speed and direction. It calculates the pulse width for each speed and direction by a vector calculation and then uses PWM(Pulse Width Modulation) to actually control the motors. The equation used to obtain the pulse width is:
-	PulseWidth= 〖Force〗_X*velocity*Cos(Angle)+ 〖Force〗_Y*velocity*Sin(Angle)
+	
+_PulseWidth= Force<sub>x</sub> * velocity * Cos(&theta;) + Force<sub>y</sub> * velocity * Sin(&theta;)_
+	
 The Motors module turns the laser on if it gets the command to turn it on. It           turns the laser off if it gets the command to turn it off.
 Also, it transmits the altered status of the RoboTrike back to the Remote module after executing an action. For example, if the speed has been changed by the last command, it sends the updated speed value back to the Remote module so that the status can be displayed on LED digits. See the Functional Specification for Remote to check actual messages shown on LED display. It also sends error messages to the Remote module in case of errors. There are three types of errors: System Failure, Serial Error, and Parser Error. See the Error Handling section for details. 
  
