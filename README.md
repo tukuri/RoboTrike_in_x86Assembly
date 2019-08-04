@@ -1,4 +1,4 @@
-# Robotrike Project in x86 Assembly by Sung Hoon Choi 
+# Robotrike in x86 Assembly (EE/CS 51 at Caltech) by Sung Hoon Choi 
 
 ## Functional Specification for the Motors module
                   
