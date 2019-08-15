@@ -41,7 +41,7 @@ Also, it transmits the altered status of the RoboTrike back to the Remote module
 
 ## Functional Specification for the remote module
 
-**Description**: The remote module consists of eight 7-segment LED digit displays and 16 (4 keys per row) keys. When the user pushes a key, the corresponding command will be transmitted to the Motors module through the serial channel. Also, every time a command is transmitted to the Motors module, the changed status(speed, direction, laser) will be displayed on the LED digits. If the command did not change any status of the RoboTrike, LED digits will keep displaying the old message. It also displays various error messages in case of errors and resets in case of the system failure. See the Error Handling section for details. Note that the auto-repeat is implemented for the keys, so the user can keep pressing a key to execute a command for a large number of times.
+**Description**: The remote module consists of eight 7-segment LED digit displays and 16 (4 keys per row) keys. When the user pushes a key, the corresponding command will be transmitted to the Motors module through the serial channel. Also, every time a command is transmitted to the Motors module, the changed status(speed, direction, laser) will be displayed on the LED digits. If the command did not change any status of the RoboTrike, LED digits will keep displaying the old message. It also displays various error messages in case of errors and resets in case of the system failure. See the Error Handling section for details. Note that the auto-repeat is implemented for the keys, so the user can keep a key pressed to execute a command repeatedly.
 
 **Global Variables**:  None
 
